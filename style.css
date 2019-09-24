@@ -1,24 +1,49 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-body {
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat&display=swap');
+* {
     margin: 0;
     padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.container {
+    text-align: center;
+}
+
+.navbar {
+    background: #ddc0c0;
+    padding-bottom: 1em;
+    border-radius: 3em;
+    position: relative;
+    width: 85%;
+    margin-top: 1em;
+    display: inline-block;
 }
 
 .headeri {
-    font-family: 'Lobster', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
     font-weight: bold;
-    margin-right: 5em;
+    position: relative;
+    display: block;
+    padding-bottom: .5em;
+}
+
+.wdev, .imgs {
+    margin-right: 3em;
+}
+
+.wdev, .imgs, .dev {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
 }
 
 .navbar ul li {
     list-style-type: none;
     display: inline;
-}
-
-.img-link, .wdev-link {
-    margin-right: 3em;
 }
 
 .navbar ul li a {
