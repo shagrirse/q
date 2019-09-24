@@ -3,6 +3,33 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.nav-list {
+    list-style-type: none;
+}
+.navbar {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background: #232323;
+    opacity: 0.6;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.img-link, .wdev-link {
+    margin-right: 3em;
+}
+
+.navbar ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
 .upper-header {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
