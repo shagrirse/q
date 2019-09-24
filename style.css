@@ -9,12 +9,16 @@
     background: transparent;
 }
 
+body {
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
 .container {
     text-align: center;
 }
 
 .navbar {
-    background: #ddc0c0;
+    opacity: 0.67;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
     padding-bottom: 1em;
     border-radius: 3em;
     position: relative;
@@ -39,6 +43,16 @@
 .wdev, .imgs, .dev {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
+    padding: .7em;
+    background: rgb(177, 177, 177);
+    border-radius: 2em;
+    opacity: 0.5;
+    transition: all 0.52s;
+}
+
+.wdev:hover, .imgs:hover, .dev:hover {
+    opacity: 1;
+    background: #dbdbdb;
 }
 
 .navbar ul li {
