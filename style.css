@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat|Pacifico|Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Mono&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -32,10 +32,34 @@ body::-webkit-scrollbar-thumb {
     background: #1f2833;
 }
 .container-2 {
+    margin-top: -1%;
     text-align: center;
     width: 100%;
     height: 100%;
     background: #252f3b;
+}
+
+.links {
+    text-align: right;
+    padding-top: 3em;
+    padding-right: 10em;
+    word-spacing: 1.5em;
+}
+
+.links ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.fab.fa-github-square, .fab.fa-instagram {
+    font-size: 3em;
+    color: #57c7c1;
+    animation: fadein1 6s;
+    transition: all 0.5s;
+}
+
+.fab.fa-github-square:hover, .fab.fa-instagram:hover {
+    color: #C5C6C7;
 }
 
 .navbar {
@@ -77,13 +101,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wdev, .imgs, .dev {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     font-size: 3em;
-    padding: .7em;
+    padding: .3em .5em;
     background: #0b0c10;
-    border-radius: 2em;
+    border-radius: 1em;
     animation: fadein1 6s;
     transition: all 0.52s;
+    -webkit-box-shadow: 0px 1px 20px 2px rgba(69,162,158,1);
+    -moz-box-shadow: 0px 1px 20px 2px rgba(69,162,158,1);
+    box-shadow: 0px 1px 20px 0px rgba(69,162,158,1);
 }
 
 @keyframes fadein1 {
@@ -91,13 +118,13 @@ body::-webkit-scrollbar-thumb {
         opacity: 0;
     }
     25% {
-        opacity: 0;
+        opacity: 0.2;
     }
     50% {
-        opacity: 0.3;
+        opacity: 0.5;
     }
     75% {
-        opacity: 0.6;
+        opacity: 0.7;
     }
     to {
         opacity: 1;
@@ -140,3 +167,4 @@ body::-webkit-scrollbar-thumb {
     text-shadow: 3px 3px 13px rgba(150, 150, 150, 1);
     cursor: default;
 }
+/* #0B0C10 #1F2833 #C5C6C7 #66FCF1 #45A29E */
