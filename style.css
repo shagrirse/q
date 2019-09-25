@@ -21,8 +21,8 @@ body::-webkit-scrollbar-track {
 }
 body::-webkit-scrollbar-thumb {
     border-radius: 1em;
-  background-color: #56cfc7 ;
-  outline: 1px solid slategrey;
+    background-color: #56cfc7 ;
+    outline: 1px solid slategrey;
 }
 
 .container {
@@ -60,13 +60,14 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     color: #66fcf1;
     transition: all 0.4s;
+    cursor: default;
 }
 
 @keyframes fadein {
     from {
         opacity: 0;
     }
-    tp {
+    to {
         opacity: 1;
     }
 }
@@ -76,15 +77,31 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wdev, .imgs, .dev {
-
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
+    font-size: 2.7em;
     padding: .7em;
     background: #0b0c10;
     border-radius: 2em;
-    opacity: 0.5;
-    animation: fadein 6s;
+    animation: fadein1 6s;
     transition: all 0.52s;
+}
+
+@keyframes fadein1 {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    75% {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .navbar ul {
