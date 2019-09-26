@@ -35,8 +35,8 @@ body {
 
 .links {
     text-align: right;
-    padding-top: 3em;
-    padding-right: 10em;
+    padding-top: 3%;
+    padding-right: 10%;
     word-spacing: 1.5em;
 }
 
@@ -78,6 +78,50 @@ body {
     text-decoration: none;
     color: #66fcf1;
     transition: all 0.4s;
+    letter-spacing: .05em;
+    animation: innout 6s ease-out infinite normal;
+    -webkit-animation: innout 15s ease-out infinite normal;
+}
+
+@keyframes innout {
+    0% {
+        transform: scale(0.97);
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.97);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.97);
+    }
+}
+
+@-webkit-keyframes innout {
+    0% {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    20% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    40% {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
+    60% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.97);
+        transform: scale(0.97);
+    }
 }
 
 @keyframes fadein {
@@ -89,7 +133,7 @@ body {
     }
 }
 
-.wdev, .imgs {
+/* .wdev, .imgs {
     margin-right: 3em;
 }
 
@@ -122,13 +166,13 @@ body {
     to {
         opacity: 1;
     }
-}
+} */
 
 .navbar ul {
     margin-bottom: .5em;
 }
 
-.wdev:hover, .imgs:hover, .dev:hover {
+/* .wdev:hover, .imgs:hover, .dev:hover {
     opacity: 1;
     background: #c5c6c7;
     color: #1f2833;
@@ -143,10 +187,67 @@ body {
     color: #56cfc7;
     text-decoration: none;
 
-}
+} */
 
 .headeri:hover {
     color: #58b8b3;
 }
 
 /* #0B0C10 #1F2833 #C5C6C7 #66FCF1 #45A29E */
+
+@media only screen and (max-width:768px) {
+    /* .wdev, .imgs, .dev {
+        font-size: calc(3em - 2vw)
+    } */
+    .headeri {
+        font-size: 10em;
+    }
+    /* .wdev, .imgs {
+        margin-right: 1em;
+    } */
+}
+
+@media only screen and (max-width:420px) {
+    .headeri {
+        font-size: 7em;
+    }
+    .fab.fa-github-square, .fab.fa-instagram {
+        font-size: 2em;
+        color: #57c7c1;
+    }
+    .links {
+        text-align: left;
+        padding-left: 5%;
+    }
+
+}
+
+@media only screen and (max-width:360px) {
+    .headeri {
+        font-size: 6em;
+    }
+    .fab.fa-github-square, .fab.fa-instagram {
+        font-size: 2em;
+        color: #57c7c1;
+    }
+    .links {
+        text-align: left;
+        padding-left: 5%;
+    }
+
+}
+
+@media only screen and (max-width:320px) {
+    .headeri {
+        font-size: 5em;
+    }
+    .fab.fa-github-square, .fab.fa-instagram {
+        font-size: 2em;
+        color: #57c7c1;
+    }
+    .links {
+        text-align: left;
+        padding-left: 5%;
+    }
+
+}
