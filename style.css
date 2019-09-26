@@ -63,6 +63,7 @@ body {
     transform: translate(-50%, -50%);
     opacity: 1;
     display: inline-block;
+    animation: fade 6s;
     width: 100%;
 }
 
@@ -73,14 +74,22 @@ body {
     position: relative;
     display: block;
     margin-bottom: .2em;
-    animation: fadein 6s;
     text-shadow: 3px 3px 10px rgb(255, 86, 86);
     text-decoration: none;
     color: #66fcf1;
-    transition: all 0.4s;
     letter-spacing: .05em;
-    animation: innout 6s ease-out infinite normal;
+    transition: all 0.4s;
+    animation: innout 15s ease-out infinite normal;
     -webkit-animation: innout 15s ease-out infinite normal;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes innout {
@@ -88,6 +97,7 @@ body {
         transform: scale(0.97);
     }
     20% {
+
         transform: scale(1);
     }
     40% {
@@ -121,15 +131,6 @@ body {
     100% {
         -webkit-transform: scale(0.97);
         transform: scale(0.97);
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
     }
 }
 
