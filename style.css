@@ -16,9 +16,9 @@ body {
 body::-webkit-scrollbar {
     width: .5em;
 }
-body::-webkit-scrollbar-track {
+/* body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgb(115, 200, 250);
-}
+} */
 body::-webkit-scrollbar-thumb {
     border-radius: 1em;
     background-color: #56cfc7 ;
@@ -38,6 +38,7 @@ body {
     padding-top: 3%;
     padding-right: 10%;
     word-spacing: 1.5em;
+    animation: fade 6s;
 }
 
 .links ul li {
@@ -69,7 +70,7 @@ body {
 
 .headeri {
     font-family: 'Permanent Marker', cursive;
-    font-size: 11em;
+    font-size: 15em;
     font-weight: bold;
     position: relative;
     display: block;
@@ -196,6 +197,15 @@ body {
 
 /* #0B0C10 #1F2833 #C5C6C7 #66FCF1 #45A29E */
 
+@media only screen and (min-width:1440px) {
+    .headeri {
+        font-size: 20em;
+    }
+    .fab.fa-github-square, .fab.fa-instagram {
+        font-size: 5em;
+    }
+}
+
 @media only screen and (max-width:768px) {
     /* .wdev, .imgs, .dev {
         font-size: calc(3em - 2vw)
@@ -210,7 +220,7 @@ body {
 
 @media only screen and (max-width:420px) {
     .headeri {
-        font-size: 7em;
+        font-size: 6em;
     }
     .fab.fa-github-square, .fab.fa-instagram {
         font-size: 2em;
