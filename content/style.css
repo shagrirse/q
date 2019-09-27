@@ -10,12 +10,53 @@
     background: transparent;
 }
 
+.container1 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    height: 101%;
+    width: 100%;
+    background: #1f2833;
+    z-index: 2;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.headeri {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 15em;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    display: block;
+    margin-bottom: .2em;
+    text-shadow: 3px 3px 10px rgb(255, 86, 86);
+    text-decoration: none;
+    color: #66fcf1;
+    animation: fade 6s;
+    letter-spacing: .05em;
+}
+
 .whole {
     margin: 0 5%;
+    display: none;
 }
 
 body {
-    background: #FDD935;
+    background: #083045;
     scroll-behavior: smooth;
 }
 
@@ -27,7 +68,7 @@ body::-webkit-scrollbar {
 } */
 body::-webkit-scrollbar-thumb {
     border-radius: 1em;
-    background-color: #000000 ;
+    background-color: #eed369 ;
     outline: 1px solid slategrey;
 }
 
@@ -44,13 +85,18 @@ body::-webkit-scrollbar-thumb {
     text-transform: uppercase;
     cursor: pointer;
     font-size: 10em;
-    margin: 0 5%;
+    margin-left: 5%;
     transition: all ease-in 0.2s;
     color: #fff;
 }
 
+.scroll {
+    width: fit-content;
+    margin-top: 10%;
+}
+
 .navhidden h1:hover {
-    opacity: 0.8;
+    color: #eed369;
 }
 
 .navbar {
@@ -60,20 +106,105 @@ body::-webkit-scrollbar-thumb {
 
 .name {
     font-family: "Permanent Marker", sans-serif;
-    font-size: 7em;
+    color: #eed369;
+    font-size: 10em;
     text-align: center;
-    margin-bottom: .5em;
-    border-bottom:3px solid #000000;
+    margin-bottom: 0.2em;
+    border-bottom:3px solid #eed369;
+    cursor: default;
 }
 
-.container {
+.name.footer {
+    font-size: 5em;
+    text-align: center;
+    margin: .5em 0 0 0;
+    border-top:3px solid #eed369;
+    border-bottom: none;
+}
+
+.container.img, .container.dev {
+    color: #373c3e;
+    background-color: #ffffff;
     width: 100%;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
 
-.container.about {
-    width: 100%;
-    height: 80vh;
-    font-family: 'Montserrat', sans-serif;
+.container.dev, .container.about {
+    margin-bottom: 2%;
 }
+
+.footer {
+    text-align: center;
+}
+
+.footer h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #eed369;
+    margin: 1% 0;
+}
+
+.links1 ul li {
+    display: inline;
+}
+
+.links1 {
+    word-spacing: 1em;
+}
+
+.fab.fa-github-square, .fab.fa-instagram, .far.fa-envelope {
+    font-size: 3em;
+    color: #eed369;
+}
+
+.abtme {
+    cursor: default;
+    font-size: 4em;
+    text-align: center;
+    color: #eed369;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.container.about {
+    display: inline-block;
+    width: 100%;
+    height: 87vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+    margin-bottom: 8%;
+    overflow: hidden;
+}
+
+.abt {
+    display: inline-block;
+    font-size: 1.5em;
+    color: #eed369;
+    height: 100%;
+}
+
+.abt.left {
+    border-right: 3px solid #eed369;
+    width: 35%;
+    float: left;
+    margin-left: 3%;
+    padding-right: 4%;
+    text-align: center;
+}
+
+.abt.left i {
+    padding-bottom: 3%;
+}
+
+.abt.right {
+    margin-left: 4%;
+    width: 50%;
+}
+
+.fas.fa-user-tie {
+    font-size: 3em;
+}
+
+
+/* TODO: GitHub Logo, LinkedIn(?) */
