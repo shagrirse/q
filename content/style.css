@@ -24,12 +24,8 @@
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 .headeri {
@@ -37,9 +33,9 @@
     font-size: 15em;
     font-weight: bold;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 25%;
+    transform: translate(-30%, -25%);
     opacity: 1;
     display: block;
     margin-bottom: .2em;
@@ -48,6 +44,24 @@
     color: #66fcf1;
     animation: fade 6s;
     letter-spacing: .05em;
+    animation: innout 15s ease-out infinite normal;
+    -webkit-animation: innout 15s ease-out infinite normal;
+}
+
+@keyframes innout {
+    0% {transform: scale(0.97);}
+    20% {transform: scale(1);}
+    40% {transform: scale(0.97);}
+    60% {transform: scale(1);}
+    100% {transform: scale(0.97);}
+}
+
+@-webkit-keyframes innout {
+    0% {-webkit-transform: scale(0.97); transform: scale(0.97);}
+    20% {-webkit-transform: scale(1); transform: scale(1);}
+    40% {-webkit-transform: scale(0.97); transform: scale(0.97);}
+    60% {-webkit-transform: scale(1); transform: scale(1);}
+    100% {-webkit-transform: scale(0.97); transform: scale(0.97);}
 }
 
 .whole {
@@ -157,7 +171,7 @@ body::-webkit-scrollbar-thumb {
     color: #eed369;
 }
 
-.abtme {
+/* .abtme {
     cursor: default;
     font-size: 4em;
     text-align: center;
@@ -165,16 +179,17 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     font-weight: bold;
     margin-bottom: 2%;
-}
+} */
 
 .container.about {
     display: inline-block;
     width: 100%;
-    height: 87vh;
+    height: 80vh;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     overflow: hidden;
+    margin-top: 7%;
 }
 
 .abt {
@@ -200,11 +215,38 @@ body::-webkit-scrollbar-thumb {
 .abt.right {
     margin-left: 4%;
     width: 50%;
+    text-align: center;
 }
 
 .fas.fa-user-tie {
     font-size: 3em;
 }
 
+.abt h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 1% 0;
+    cursor: default;
+}
+
+.abt-info {
+    border-radius: 2em;
+    padding: 5% 2%;
+    background-color: #eed369;
+    color: #373c3e;
+}
+
+.abt-info.second {
+    margin-top: 1em;
+}
+
+.abt-info p {
+    font-weight: 400;
+}
+
+.glance {
+    display: grid;
+}
 
 /* TODO: GitHub Logo, LinkedIn(?) */

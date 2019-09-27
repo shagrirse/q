@@ -10,7 +10,7 @@ jQuery(document).ready(function(){
 
     $("#redir-abt").click(function() {
         $('html, body').animate({
-            scrollTop: $("#about").offset().top
+            scrollTop: $("body").offset().top
         }, 1000);
         jQuery('#navhidden').fadeToggle('slow');
         $hamburger.toggleClass("is-active");
@@ -33,8 +33,8 @@ jQuery(document).ready(function(){
     });
 
     $(window).bind('scroll', function() {
-        if ($(window).scrollTop() > 1) {
-            $('#container1').hide('slow');
+        if ($(window).scrollTop() > 0.1) {
+            $('#container1').fadeOut('fast');
         }
         else {
             $('#whole').css('display', 'block');
