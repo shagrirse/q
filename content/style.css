@@ -1,5 +1,5 @@
 /* #FDD935 #000000 */
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Montserrat|Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Permanent+Marker|Montserrat|Lexend+Deca|Liu+Jian+Mao+Cao&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +29,7 @@
 }
 
 .headeri {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Permanent Marker', sans-serif;
     font-size: 15em;
     font-weight: bold;
     position: absolute;
@@ -39,7 +39,7 @@
     opacity: 1;
     display: block;
     margin-bottom: .2em;
-    text-shadow: 3px 3px 10px rgb(255, 86, 86);
+    text-shadow: 4px 4px 5px #53ccc4;
     text-decoration: none;
     color: #66fcf1;
     animation: fade 6s;
@@ -92,6 +92,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     width: 100%;
     height: 100%;
+    z-index: 5;
 }
 
 .navhidden h1 {
@@ -116,6 +117,7 @@ body::-webkit-scrollbar-thumb {
 .navbar {
     position: fixed;
     margin: 50vh 0;
+    z-index: 5;
 }
 
 .name {
@@ -184,12 +186,12 @@ body::-webkit-scrollbar-thumb {
 .container.about {
     display: inline-block;
     width: 100%;
-    height: 80vh;
+    height: 57em;
     font-family: 'Montserrat', sans-serif;
     margin: auto;
     margin-bottom: 5%;
     overflow: hidden;
-    margin-top: 7%;
+    margin-top: 3%;
 }
 
 .abt {
@@ -223,6 +225,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .abt h3 {
+    font-family: 'Staatliches', cursive;
+    letter-spacing: .15em;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2em;
@@ -231,22 +235,93 @@ body::-webkit-scrollbar-thumb {
 }
 
 .abt-info {
-    border-radius: 2em;
+    border-radius: 1.5em;
     padding: 5% 2%;
     background-color: #eed369;
-    color: #373c3e;
+    color: #083045;
+    font-weight: 400;
 }
 
 .abt-info.second {
     margin-top: 1em;
 }
 
-.abt-info p {
-    font-weight: 400;
+.abt.right h3 {
+    margin-bottom: 5%;
+}
+
+.identity {
+    background: transparent;
+    width: 100%;
+    height: 15em;
+    border-radius: .5em;
+    perspective: 1000px;
+}
+
+.fas.fa-code, .fas.fa-user-graduate, .fas.fa-medal, .fas.fa-book-open, .fab.fa-angellist, .fas.fa-check-double {
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .glance {
     display: grid;
+    row-gap: 2em;
+    column-gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+.card {
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.identity:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 5px 4px 8px 0 rgba(255, 255, 255, 0.4);
+    border-radius: 0.5em;
+}
+
+.card-back{
+      transform: rotateY(180deg);
+      background: #eed369;
+      color: #083045;
+}
+
+.card-front{
+    background: #eed369;
+    color: #083045;
+}
+
+.headman {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.card-back.one ul {
+    font-size: 0.8em;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
 
 /* TODO: GitHub Logo, LinkedIn(?) */
