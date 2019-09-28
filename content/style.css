@@ -190,7 +190,7 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Montserrat', sans-serif;
     margin: auto;
     margin-bottom: 5%;
-    overflow: hidden;
+    overflow: visible;
     margin-top: 3%;
 }
 
@@ -235,6 +235,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .abt-info {
+    text-align: left;
     border-radius: 1.5em;
     padding: 5% 2%;
     background-color: #eed369;
@@ -258,8 +259,8 @@ body::-webkit-scrollbar-thumb {
     perspective: 1000px;
 }
 
-.fas.fa-code, .fas.fa-user-graduate, .fas.fa-medal, .fas.fa-book-open, .fab.fa-angellist, .fas.fa-check-double {
-    font-size: 1.5em;
+.fas.fa-code, .fas.fa-user-graduate, .fas.fa-medal, .fas.fa-book-open {
+    font-size: 4em;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -270,7 +271,7 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     row-gap: 2em;
     column-gap: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
@@ -292,14 +293,14 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    box-shadow: 5px 4px 8px 0 rgba(255, 255, 255, 0.4);
     border-radius: 0.5em;
 }
 
 .card-back{
       transform: rotateY(180deg);
-      background: #eed369;
+      background: #c0c0c0;
       color: #083045;
+      text-align: left;
 }
 
 .card-front{
@@ -307,12 +308,12 @@ body::-webkit-scrollbar-thumb {
     color: #083045;
 }
 
-.headman {
+/* .headman {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-}
+} */
 
 .card-back.one ul {
     font-size: 0.8em;
