@@ -356,18 +356,10 @@ body::-webkit-scrollbar-thumb {
         margin-top: 25%;
         width: 100%;
         float: left;
-        height: fit-content;
         margin-left: 3%;
         text-align: center;
-        position: relative;
         margin-top: 13%;
-    }
-    .identity {
-        background: transparent;
-        width: 100%;
-        height: 5em;
-        border-radius: .5em;
-        perspective: 1000px;
+        height: fit-content;
     }
     .container.about {
         overflow: visible;
@@ -378,7 +370,8 @@ body::-webkit-scrollbar-thumb {
         margin-left: 0;
         padding-left: 0;
         width: 100%;
-        text-align: center;
+        margin-left: 3%;
+        height: fit-content;
     }
     .glance {
         display: none;
