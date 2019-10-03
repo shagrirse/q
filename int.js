@@ -3,6 +3,12 @@ jQuery(document).ready(function(){
         jQuery('#navhidden').fadeToggle('fast');
     });
 
+    jQuery('.s-down').on('click', function(event) {        
+        jQuery('#container1').fadeToggle('fast');
+        $('#whole').fadeToggle()
+        $('#navbar').fadeToggle()
+    });
+
     var $hamburger = $(".hamburger");
     $hamburger.on("click", function(e) {
     $hamburger.toggleClass("is-active");
@@ -32,14 +38,15 @@ jQuery(document).ready(function(){
         $hamburger.toggleClass("is-active");
     });
 
-    }).resize(); // This will simulate a resize to trigger the initial run.
+    }).resize();
 
-    $(window).bind('scroll', function() {
+    $(window).scroll(function() {
         if ($(window).scrollTop() > 0.1) {
-            $('#container1').fadeOut('fast');
+            $('#container1').fadeOut();
             $('#navbar').css('display', 'block');
         }
         else {
             $('#whole').css('display', 'block');
         }
    });
+

@@ -1,5 +1,6 @@
 /* #FDD935 #000000 */
-@import url('https://fonts.googleapis.com/css?family=Staatliches|Permanent+Marker|Montserrat|Lexend+Deca|Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches|Permanent+Marker|Montserrat|Lexend+Deca&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -27,6 +28,7 @@
     min-height: 100%;
     opacity: 0.3;
 }
+
 .container1 {
     overflow: hidden;
     text-align: center;
@@ -40,9 +42,32 @@
     z-index: 3;
 }
 
+.s-down {
+    font-family: 'Staatliches', cursive;
+    font-size: 2em;
+    color: #eed369;
+    transition: all 0.3s;
+    cursor: pointer;
+    animation: fade 6s;
+    position: absolute;
+    width: fit-content;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.s-down:hover {
+    border-bottom: 3px solid #eed369;
+}
+
 @keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .headeri {
@@ -62,6 +87,7 @@
     color: #eed369;
     animation: fade 6s;
     letter-spacing: .05em;
+    cursor: default;
 }
 
 /* GENERAL SHIT */
@@ -83,7 +109,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     border-radius: 1em;
-    background-color: #eed369 ;
+    background-color: #eed369;
     outline: 1px solid slategrey;
 }
 
@@ -122,7 +148,8 @@ body::-webkit-scrollbar-thumb {
     z-index: 2;
 }
 
-.container.img, .container.dev {
+.container.img,
+.container.dev {
     color: #373c3e;
     background-color: #ffffff;
     width: 100%;
@@ -130,18 +157,28 @@ body::-webkit-scrollbar-thumb {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container.dev, .container.about {
+.container.dev,
+.container.about {
     margin-bottom: 2%;
 }
 
-.links1 ul li{
+.links1 ul li {
     display: inline;
     letter-spacing: 1em;
 }
 
-.fab.fa-github-square, .far.fa-envelope, .fab.fa-linkedin {
+.fab.fa-github-square,
+.far.fa-envelope,
+.fab.fa-linkedin {
     font-size: 3em;
     color: #eed369;
+    transition: all ease-out 0.2s;
+}
+
+.fab.fa-github-square:hover,
+.far.fa-envelope:hover,
+.fab.fa-linkedin:hover {
+    opacity: 0.5;
 }
 
 /* ABOUT SECTION */
@@ -215,16 +252,19 @@ body::-webkit-scrollbar-thumb {
     background: none;
 }
 
-.abt-info.second ul li{
+.abt-info.second ul li {
     display: inline;
 }
 
-.fab.fa-github-square.aboutsection, .far.fa-envelope.aboutsection, .fab.fa-linkedin.aboutsection {
+.fab.fa-github-square.aboutsection,
+.far.fa-envelope.aboutsection,
+.fab.fa-linkedin.aboutsection {
     font-size: 3em;
     color: #eed369;
 }
 
-.fab.fa-github-square.aboutsection, .fab.fa-linkedin.aboutsection {
+.fab.fa-github-square.aboutsection,
+.fab.fa-linkedin.aboutsection {
     margin-right: 1em;
 }
 
@@ -240,7 +280,10 @@ body::-webkit-scrollbar-thumb {
     perspective: 1000px;
 }
 
-.fas.fa-code, .fas.fa-user-graduate, .fas.fa-medal, .fas.fa-book-open {
+.fas.fa-code,
+.fas.fa-user-graduate,
+.fas.fa-medal,
+.fas.fa-book-open {
     font-size: 4em;
     position: absolute;
     top: 50%;
@@ -261,7 +304,7 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 }
 
@@ -269,7 +312,8 @@ body::-webkit-scrollbar-thumb {
     transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -277,14 +321,14 @@ body::-webkit-scrollbar-thumb {
     border-radius: 0.5em;
 }
 
-.card-back{
-      transform: rotateY(180deg);
-      background: #eed369dc;
-      color: #083045;
-      text-align: left;
+.card-back {
+    transform: rotateY(180deg);
+    background: #eed369dc;
+    color: #083045;
+    text-align: left;
 }
 
-.card-front{
+.card-front {
     background: #eed369;
     color: #083045;
 }
@@ -297,12 +341,44 @@ body::-webkit-scrollbar-thumb {
 } */
 
 .card-back.one ul {
-    font-size: 0.8em;
+    font-size: 1.2em;
     list-style: none;
+    color: #301934;
+    font-weight: 600;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+.card-back h2 {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em 0;
+    text-align: center;
+    background: #eed369;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.card-back.two {
+    text-align: center;
+}
+
+.card-back.two dl {
+    margin-top: 1.2em;
+}
+
+.card-back.two dt {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0.2em;
+    color: #301934;
+}
+
+.card-back.two dd {
+    font-weight: 200;
+    font-size: 0.8em;
 }
 
 /* FOOTER */
@@ -313,7 +389,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 5em;
     text-align: center;
     margin: .5em 0 0 0;
-    border-top:3px solid #eed369;
+    border-top: 3px solid #eed369;
 }
 
 .footer {
@@ -328,11 +404,12 @@ body::-webkit-scrollbar-thumb {
 
 /* MEDIA QUERIES - WIDTH*/
 
-@media only screen and (min-width:1440px) {
-}
+@media only screen and (min-width:1440px) {}
 
 @media only screen and (max-width:1250px) {
-    .fab.fa-github-square.aboutsection, .fab.fa-linkedin.aboutsection {
+
+    .fab.fa-github-square.aboutsection,
+    .fab.fa-linkedin.aboutsection {
         margin-right: .5em;
     }
 }
@@ -341,16 +418,23 @@ body::-webkit-scrollbar-thumb {
     .navhidden h1 {
         font-size: 5em;
     }
-    .fab.fa-github-square.aboutsection, .fab.fa-linkedin.aboutsection {
+
+    .fab.fa-github-square.aboutsection,
+    .fab.fa-linkedin.aboutsection {
         margin-right: .2em;
     }
-    .fab.fa-github-square.aboutsection, .far.fa-envelope.aboutsection, .fab.fa-linkedin.aboutsection {
-    font-size: 2em;
-    color: #eed369;
+
+    .fab.fa-github-square.aboutsection,
+    .far.fa-envelope.aboutsection,
+    .fab.fa-linkedin.aboutsection {
+        font-size: 2em;
+        color: #eed369;
     }
+
     .abt-info.first {
         font-size: 0.8em;
     }
+
     /* TODO: FUCKING GET THIS SORTED IDIOT */
     .abt.left {
         margin-top: 25%;
@@ -361,11 +445,13 @@ body::-webkit-scrollbar-thumb {
         margin-top: 13%;
         height: fit-content;
     }
+
     .container.about {
         overflow: visible;
     }
+
     .abt.right {
-        display: block; 
+        display: block;
         border-left: none;
         margin-left: 0;
         padding-left: 0;
@@ -373,28 +459,29 @@ body::-webkit-scrollbar-thumb {
         margin-left: 3%;
         height: fit-content;
     }
+
     .glance {
         display: none;
     }
-    .abt.right h3{
+
+    .abt.right h3 {
         margin-top: 25%;
     }
+
     .navbar {
         margin-top: 3%;
     }
+
     .navhidden h1 {
         font-size: 5em;
     }
 }
 
-@media only screen and (max-width:425px) {
-}
+@media only screen and (max-width:425px) {}
 
-@media only screen and (max-width:360px) {
-}
+@media only screen and (max-width:360px) {}
 
-@media only screen and (max-width:320px) {
-}
+@media only screen and (max-width:320px) {}
 
 /* MEDIA QUERIES - HEIGHT*/
 
@@ -408,6 +495,7 @@ body::-webkit-scrollbar-thumb {
     .navoptions {
         margin: 10% 3%;
     }
+
     .navhidden h1 {
         font-size: 5em;
     }
