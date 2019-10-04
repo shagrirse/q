@@ -402,6 +402,11 @@ body::-webkit-scrollbar-thumb {
     margin: 1% 0;
 }
 
+/* MOBILE DIVS */
+.mobile-right {
+    display: none;
+}
+
 /* MEDIA QUERIES - WIDTH*/
 
 @media only screen and (min-width:1440px) {}
@@ -415,6 +420,37 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media only screen and (max-width:768px) {
+    .aag {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        row-gap: 0.5em;
+        color: #083045;
+    }
+    
+    .mob-prof {
+        background: #eed369;
+        display: inline;
+    }
+
+    .mob-prof ul {
+        position: relative;
+        float: right;
+        list-style: none;
+    }
+
+    .mobile-right {
+        display: block;
+        margin-left: 3%;
+    }
+
+    .mobile-right h3 {
+        color: #eed369;
+        font-family: 'Staatliches', cursive;
+        text-align: center;
+        font-size: 2em;
+    }
+
     .navhidden h1 {
         font-size: 5em;
     }
@@ -427,7 +463,7 @@ body::-webkit-scrollbar-thumb {
     .fab.fa-github-square.aboutsection,
     .far.fa-envelope.aboutsection,
     .fab.fa-linkedin.aboutsection {
-        font-size: 2em;
+        font-size: 2.5em;
         color: #eed369;
     }
 
@@ -437,13 +473,18 @@ body::-webkit-scrollbar-thumb {
 
     /* TODO: FUCKING GET THIS SORTED IDIOT */
     .abt.left {
-        margin-top: 25%;
+        margin-top: 5%;
         width: 100%;
         float: left;
         margin-left: 3%;
         text-align: center;
-        margin-top: 13%;
+        margin-top: 5%;
         height: fit-content;
+    }
+
+    .abt-info.second {
+        margin-top: 0.5em;
+        padding: 0;
     }
 
     .container.about {
@@ -451,13 +492,11 @@ body::-webkit-scrollbar-thumb {
     }
 
     .abt.right {
-        display: block;
-        border-left: none;
-        margin-left: 0;
-        padding-left: 0;
-        width: 100%;
-        margin-left: 3%;
-        height: fit-content;
+        display: none;
+    }
+
+    .abt.right h3 {
+        display: none;
     }
 
     .glance {
@@ -469,7 +508,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .navbar {
-        margin-top: 3%;
+        margin-top: 1%;
     }
 
     .navhidden h1 {
